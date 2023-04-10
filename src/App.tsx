@@ -1,26 +1,23 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+// src/App.tsx
+import React, { useState } from 'react';
+import ImageDropdown from './components/ImageDropdown';
+import TextInput from './components/TextInput';
+import Preview from './components/Preview';
 
-function App() {
+const App: React.FC = () => {
+  const [baseImage, setBaseImage] = useState('image1.png');
+  const [text, setText] = useState('');
+  const [textColor, setTextColor] = useState('#000000');
+
+  const images = ['image1.png', 'image2.png', 'image3.png'];
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <ImageDropdown images={images} onSelect={setBaseImage} />
+      <TextInput onTextChange={setText} onColorChange={setTextColor} />
+      <Preview baseImage={baseImage} text={text} textColor={textColor} />
     </div>
   );
-}
+};
 
 export default App;

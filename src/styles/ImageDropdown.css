@@ -1,0 +1,34 @@
+
+/* src/styles/ImageDropdown.css */
+
+
+.image-dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.selected-image {
+  cursor: pointer;
+  border: 1px solid #ccc;
+}
+
+.image-list {
+  position: absolute;
+  z-index: 1;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  display: flex;
+  overflow-x: auto;
+  white-space: nowrap;
+  padding: 8px;
+}
+
+.image-item {
+  display: inline-block;
+  cursor: pointer;
+  margin-right: 8px;
+}
+
+.image-item:last-child {
+  margin-right: 0;
+}
