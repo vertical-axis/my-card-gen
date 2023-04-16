@@ -9,7 +9,12 @@ const App: React.FC = () => {
   const [text, setText] = useState('');
   const [textColor, setTextColor] = useState('#000000');
 
-  const images = ['image1.png', 'image2.png', 'image3.png'];
+  const images = [
+    'image_christmas01.png', 
+    'image_christmas02.png', 
+    'image_christmas03.png', 
+    'image_christmas04.png', 
+  ];
 
   return (
     <div>

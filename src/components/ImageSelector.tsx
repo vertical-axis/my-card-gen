@@ -5,7 +5,12 @@ interface ImageSelectorProps {
   onSelect: (imageUrl: string) => void;
 }
 
-const images = ['image1.png', 'image2.png', 'image3.png'];
+const images = [
+  'image_christmas01.png', 
+  'image_christmas02.png', 
+  'image_christmas03.png', 
+  'image_christmas04.png', 
+];
 
 const ImageSelector: React.FC<ImageSelectorProps> = ({ onSelect }) => {
   return (
