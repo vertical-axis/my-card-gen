@@ -35,13 +35,21 @@ const ImageDropdown: React.FC<ImageDropdownProps> = ({ images, onSelect }) => {
   return (
     <div ref={dropdownRef} className="image-dropdown">
       <div className="selected-image" onClick={() => setIsOpen(!isOpen)}>
-        <img src={selectedImage} alt="Selected" width="50" height="50" />
+        <img
+          src={selectedImage}
+          alt="Selected"
+          style={{ maxWidth: '50px', maxHeight: '50px', objectFit: 'contain' }}
+        />
       </div>
       {isOpen && (
         <ul className="image-list">
           {images.map((image) => (
             <li key={image} className="image-item" onClick={() => handleImageClick(image)}>
-              <img src={image} alt={image} width="50" height="50" />
+              <img
+                src={image}
+                alt={image}
+                style={{ maxWidth: '50px', maxHeight: '50px', objectFit: 'contain' }}
+              />
             </li>
           ))}
         </ul>
